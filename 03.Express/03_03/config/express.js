@@ -39,7 +39,8 @@ module.exports = function() {
 	app.set('view engine', 'ejs');
 
 	// Load the 'index' routing file
-	require('../app/routes/index.server.routes.js')(app);
+	// 요청 URL에 따라 답을 달리 하는 Routing 처리를 따로 설정
+	require('../app/routes/index.server.routes.js')(app);   // 중간에서 require(import) 한다.
 
 	// Configure static file serving
 	app.use(express.static('./public'));
