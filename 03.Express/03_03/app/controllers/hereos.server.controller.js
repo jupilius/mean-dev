@@ -14,6 +14,8 @@ exports.getHeroes = function(req, res) {
         { id: 10, name: '개구리왕눈이' }
     ];
 
+
+
     // json 형식으로 보내준다.
     res.json(heroes);
 };
