@@ -13,9 +13,32 @@ exports.getHeroes = function(req, res) {
         { id: 9, name: '로보카폴리' },
         { id: 10, name: '개구리왕눈이' }
     ];
-
-
-
     // json 형식으로 보내준다.
     res.json(heroes);
 };
+
+exports.getNewHeroes =  (req, res) => {
+    let newHeroes = [
+        { id: 1, name: '박세리' },
+        { id: 2, name: '박찬호' },
+        { id: 3, name: '아이유' },
+        { id: 4, name: '박인비' },
+        { id: 5, name: '몰라' },
+        { id: 6, name: '브래드' },
+        { id: 7, name: '스카렛' }
+    ];
+    res.json(newHeroes);
+}
+
+exports.getHiphopHeroes = (req, res) => {
+    let hiphopHeroes = [
+        { id: 1, name: '박세리' },
+        { id: 2, name: '박찬호' },
+        { id: 3, name: '아이유' },
+        { id: 4, name: '박인비' },
+        { id: 5, name: '몰라' },
+        { id: 6, name: '브래드' },
+        { id: 7, name: '스카렛' }
+    ];
+    res.json(hiphopHeroes);
+}

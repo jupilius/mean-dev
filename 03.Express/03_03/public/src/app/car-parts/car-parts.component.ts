@@ -16,6 +16,8 @@ import {Hero} from "../shared/hero.model";
       </li>
     </ul>
     <button (click)="btnCliked()">눌러주세요</button>
+    <button (click)="btnClikedPromise()">toPromise로 넘겨주세요.</button>
+    <button (click)="btnClikedPost()">Post로 넘겨주세요.</button>
   `
 })
 export class CarPartsComponent {
@@ -24,6 +26,15 @@ export class CarPartsComponent {
 
     btnCliked() : void{
         this.carService.getCars().subscribe(data => this.heroes = data);
+        // console.log(data);
+    }
+    btnClikedPromise() : void{
+        this.carService.getCarsWithPromise().then(data => this.heroes = data);
+        // console.log(data);
+    }
+
+    btnClikedPost() : void{
+        this.carService.getNewHero().subscribe(data => this.heroes = data);
         // console.log(data);
     }
 

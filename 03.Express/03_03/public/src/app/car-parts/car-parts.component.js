@@ -23,12 +23,22 @@ var CarPartsComponent = (function () {
         this.carService.getCars().subscribe(function (data) { return _this.heroes = data; });
         // console.log(data);
     };
+    CarPartsComponent.prototype.btnClikedPromise = function () {
+        var _this = this;
+        this.carService.getCarsWithPromise().then(function (data) { return _this.heroes = data; });
+        // console.log(data);
+    };
+    CarPartsComponent.prototype.btnClikedPost = function () {
+        var _this = this;
+        this.carService.getNewHero().subscribe(function (data) { return _this.heroes = data; });
+        // console.log(data);
+    };
     return CarPartsComponent;
 }());
 CarPartsComponent = __decorate([
     core_1.Component({
         selector: 'car-parts',
-        template: "\n    <h2>\uC601\uC6C5\uC785sdfasd\uB2C8\uB2E4.</h2>\n       \n    <ul>\n      <li *ngFor=\"let hero of heroes\">\n         {{hero.id}} \uBC88 \uC601\uC6C5 {{hero.name}}\n      </li>\n    </ul>\n    <button (click)=\"btnCliked()\">\uB20C\uB7EC\uC8FC\uC138\uC694</button>\n  "
+        template: "\n    <h2>\uC601\uC6C5\uC785sdfasd\uB2C8\uB2E4.</h2>\n       \n    <ul>\n      <li *ngFor=\"let hero of heroes\">\n         {{hero.id}} \uBC88 \uC601\uC6C5 {{hero.name}}\n      </li>\n    </ul>\n    <button (click)=\"btnCliked()\">\uB20C\uB7EC\uC8FC\uC138\uC694</button>\n    <button (click)=\"btnClikedPromise()\">toPromise\uB85C \uB118\uACA8\uC8FC\uC138\uC694.</button>\n    <button (click)=\"btnClikedPost()\">Post\uB85C \uB118\uACA8\uC8FC\uC138\uC694.</button>\n  "
     }),
     __metadata("design:paramtypes", [car_service_1.CarService])
 ], CarPartsComponent);

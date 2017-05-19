@@ -4,6 +4,8 @@ const hereos = require('../controllers/hereos.server.controller');
 
 // Define the routes module' method
 module.exports = function(app) {
-    // Mount the 'index' controller's 'render' method
+
     app.get('/heroes', hereos.getHeroes);
+    app.post('/heroes', hereos.getNewHeroes);
+    //app.put('/heroes', hereos.getHiphopHeroes); // update할때 put 방식으로 요청한다.
 };
