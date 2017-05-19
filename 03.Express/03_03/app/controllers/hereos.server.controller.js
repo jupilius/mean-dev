@@ -20,7 +20,8 @@ exports.getHeroes = function(req, res) {
 exports.getNewHeroes =  (req, res) => {
 
     let fromClient = req.body.key; // POST 방식의 파마미터를 받을때는 req.body.전달인자변수
-    // req. // Get 방식의 파마미터를 받을때는 req..전달인자변수 -> 알아봐야함.
+    // req. // Get 방식의 파마미터를 받을때는 req.query.전달인자변수 -> 알아봐야함.
+
     console.log(fromClient);
     let newHeroes = [
         { id: 1, name: '박세리' },
