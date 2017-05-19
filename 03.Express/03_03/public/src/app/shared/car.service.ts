@@ -27,7 +27,7 @@ export class CarService {
 
     getNewHero() : Observable<Hero[]> {
         //post(url: string, body: any, options?: RequestOptionsArgs): Observable<Response>;
-        return this.http.post('/heroes', {}/* 필수 전달인자 임*/)
+        return this.http.post('/heroes', {key:'아아유'}/* 전달인자 임*/)
             .map(res => res.json());
     }
 }
