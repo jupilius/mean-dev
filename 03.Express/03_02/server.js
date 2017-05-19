@@ -23,7 +23,7 @@ const sayHello = function(req, res, next) {
 };
 
 // Mount both middleware funcitons
-app.get('/', hasName, sayHello);
+app.get('/', hasName, sayHello); // get 방식으로 요청
 
 // Use the Express application instance to listen to the '3000' port
 app.listen(3000);

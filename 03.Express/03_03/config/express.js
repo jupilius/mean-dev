@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 
 // Define the Express configuration method
+// 다른 곳에서 쓸 수 있도록 module.exports 에 넣는다.
 module.exports = function() {
 	// Create a new Express application instance
 	const app = express();
