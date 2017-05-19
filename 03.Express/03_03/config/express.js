@@ -43,10 +43,10 @@ module.exports = function() {
 	require('../app/routes/index.server.routes.js')(app);   // root 요청에 대한 처리 ,  중간에서 require(import) 한다.
 	require('../app/routes/heroes.server.routes.js')(app);   // heros 라우터
 
-
-
 	// Configure static file serving
+	// static 디렉토리를 설정하면 미들웨어를 거치지 않고 그냥 리턴한다.
 	app.use(express.static('./public'));
+    app.use(express.static('./public/src'));
 
 	// Return the Express application instance
 	return app;
