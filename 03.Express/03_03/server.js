@@ -2,7 +2,8 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Load the 'express' module
-const configureExpress = require('./config/express'); // ./config/express.js 파일
+// ./config/express.js 파일
+const configureExpress = require('./config/express');
 
 // Create a new Express application instance
 const app = configureExpress();

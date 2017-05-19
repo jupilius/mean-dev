@@ -35,12 +35,15 @@ module.exports = function() {
 	}));
 
 	// Set the application view engine and 'views' folder
-	app.set('views', './app/views');
-	app.set('view engine', 'ejs');
+	app.set('views', './app/views'); // views 밑에 있다.
+	app.set('view engine', 'ejs'); // ejs 로 하고,
 
 	// Load the 'index' routing file
 	// 요청 URL에 따라 답을 달리 하는 Routing 처리를 따로 설정
-	require('../app/routes/index.server.routes.js')(app);   // 중간에서 require(import) 한다.
+	require('../app/routes/index.server.routes.js')(app);   // root 요청에 대한 처리 ,  중간에서 require(import) 한다.
+	require('../app/routes/heroes.server.routes.js')(app);   // heros 라우터
+
+
 
 	// Configure static file serving
 	app.use(express.static('./public'));
